@@ -20,7 +20,7 @@ export class Launches extends Component {
         <h2 className="display-4 my-3">Launches</h2>
         <Query query={LAUNCHES_QUERY}>
             {
-                (loading, error, data) => {
+                ({loading, error, data}) => {
                     if (loading) return <h4>Loading ....</h4>
                     if (error) console.log(error)
                     console.log(data);
