@@ -1,5 +1,6 @@
 import React from 'react';
 import classNames from 'classnames';
+import Moment from 'react-moment';
 
 export default function LaunchItem({launch}) {
     const {flight_number, mission_name, launch_success, launch_date_local } = launch;
@@ -11,7 +12,7 @@ export default function LaunchItem({launch}) {
                     'text-success': launch_success,
                     'text-danger': !launch_success,
                 })}>{mission_name}</span></h4>
-                <p>{launch_date_local}</p>
+                <p><Moment format='YYYY-MM-DD HH:MM'>{launch_date_local}</Moment></p>
             </div>
             <div className="col-md-3">
                 <button className="btn btn-secondary">Launch Details</button>
