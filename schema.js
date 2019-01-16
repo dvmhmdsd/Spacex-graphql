@@ -12,3 +12,13 @@ let LanchType = new GraphQLOpjectType({
         rocket: {type: RocketType}
     })
 });
+
+// Rocket type
+let RocketType = new GraphQLOpjectType({
+    name: "Rocket",
+    fields: () => ({
+        rocket_id: {type: GraphQLString},
+        rocket_name: {type: GraphQLString},
+        rocket_type: {type: GraphQLString}
+    })
+});
