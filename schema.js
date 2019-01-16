@@ -3,7 +3,7 @@ const {GraphQLObjectType, GraphQLInt, GraphQLBoolean, GraphQLString, GraphQLList
 
 // Launch type
 let LanchType = new GraphQLObjectType({
-    name: "Lanch",
+    name: "Launch",
     fields: () => ({
         flight_number: {type: GraphQLInt},
         mission_name: {type: GraphQLString},
@@ -30,7 +30,7 @@ let RootQuery = new GraphQLObjectType({
         launches: {
             type: GraphQLList(LanchType),
             resolve(parents, args) {
-                axios.get('https://api.spacexdata.com/v3/launches')
+                return axios.get('https://api.spacexdata.com/v3/launches')
                     .then(res => res.data);
             }
         }
