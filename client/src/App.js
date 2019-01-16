@@ -2,8 +2,8 @@ import React, { Component } from 'react';
 import './App.css';
 import logo from './logo.png';
 import ApolloClient from 'apollo-boost';
-import { BrowserRouter as Router, Route } from 'react-router-dom';
 import { ApolloProvider } from 'react-apollo';
+import { BrowserRouter as Router, Route } from 'react-router-dom';
 import { Launches } from './components/launches';
 import { Launch } from './components/launch';
 
